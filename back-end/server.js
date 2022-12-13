@@ -23,7 +23,7 @@ app.get ("/", (req, res)=>{
 
 
 app.post("/users/sign-up", async function (req, res){
-    const { email, name, password }= request.body
+    const { email, name, password }= req.body
     //same as above const email= request.body.email
 
     const salt= await bcrypt.genSalt(10)
